@@ -5,7 +5,7 @@ using Infrastructure.Services;
 using Microsoft.OpenApi.Models;
 
 
-namespace Multitenant1.Api
+namespace Multitenant.Api
 {
     public class Startup
     {
