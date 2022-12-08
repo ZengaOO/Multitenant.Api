@@ -1,8 +1,9 @@
 ﻿using Core.Interfaces;
+using Core.Settings;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Multitenant1.Api.Controllers
+namespace Multitenant.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -20,11 +21,13 @@ namespace Multitenant1.Api.Controllers
             var productDetails = await _service.GetByIdAsync(id);
             return Ok(productDetails);
         }
+         
         [HttpPost]
         public async Task<IActionResult> CreateAsync(CreateProductRequest request)
         {
             return Ok(await _service.CreateAsync(request.Name, request.Description, request.Rate));
         }
+                
     }
     public class CreateProductRequest
     {

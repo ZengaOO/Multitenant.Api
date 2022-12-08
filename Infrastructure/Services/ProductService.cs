@@ -34,5 +34,10 @@ namespace Infrastructure.Services
         {
             return await _context.Products.FindAsync(id);
         }
+
+        public Task GetByIdAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
